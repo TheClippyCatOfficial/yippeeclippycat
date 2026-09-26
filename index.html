@@ -38,17 +38,21 @@
             max-width: 600px;
         }
 
+        /* Entrance Animations */
         .profile-card {
             background-color: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid #383a40;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            animation: cardFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .banner {
             height: 120px;
             background: linear-gradient(135deg, #5865f2, #eb459e);
+            opacity: 0;
+            animation: bannerSlide 0.5s ease-out 0.2s forwards;
         }
 
         .profile-header {
@@ -62,6 +66,8 @@
             left: 16px;
             width: 80px;
             height: 80px;
+            opacity: 0;
+            animation: avatarPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
         }
 
         .avatar {
@@ -103,12 +109,16 @@
             font-size: 1.3rem;
             font-weight: 700;
             color: #fff;
+            opacity: 0;
+            animation: textFadeUp 0.4s ease-out 0.5s forwards;
         }
 
         .username {
             font-size: 0.9rem;
             color: var(--text-muted);
             margin-bottom: 16px;
+            opacity: 0;
+            animation: textFadeUp 0.4s ease-out 0.55s forwards;
         }
 
         .section-box {
@@ -116,6 +126,8 @@
             padding: 12px;
             border-radius: 8px;
             margin-top: 12px;
+            opacity: 0;
+            animation: textFadeUp 0.5s ease-out 0.6s forwards;
         }
 
         .section-title {
@@ -134,6 +146,7 @@
             margin-top: 8px;
         }
 
+        /* Staggered Server Items Animation & Hover Effect */
         .server-item {
             background-color: var(--bg-primary);
             padding: 10px 12px;
@@ -142,6 +155,19 @@
             align-items: center;
             justify-content: space-between;
             gap: 12px;
+            opacity: 0;
+            animation: serverSlideIn 0.4s ease-out forwards;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .server-item:nth-child(1) { animation-delay: 0.65s; }
+        .server-item:nth-child(2) { animation-delay: 0.72s; }
+        .server-item:nth-child(3) { animation-delay: 0.79s; }
+        .server-item:nth-child(4) { animation-delay: 0.86s; }
+
+        .server-item:hover {
+            transform: translateX(4px);
+            background-color: #383a40;
         }
 
         .server-left {
@@ -189,12 +215,69 @@
             border-radius: 4px;
             font-size: 0.8rem;
             font-weight: 600;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s ease, transform 0.15s ease;
             flex-shrink: 0;
         }
 
         .join-btn:hover {
             background-color: #4752c4;
+            transform: scale(1.05);
+        }
+
+        /* Keyframes */
+        @keyframes cardFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes bannerSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes avatarPop {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes textFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes serverSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
