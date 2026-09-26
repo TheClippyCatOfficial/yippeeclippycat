@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YippeeClippyCat | Profile</title>
+    <style>
+        :root {
+            --bg-primary: #313338;
+            --bg-secondary: #2b2d31;
+            --bg-tertiary: #1e1f22;
+            --card-bg: #111214;
+            --accent-blue: #5865f2;
+            --text-normal: #dbdee1;
+            --text-muted: #949ba4;
+            --dnd-status: #f23f43;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-tertiary);
+            color: var(--text-normal);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .profile-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #383a40;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .banner {
+            height: 120px;
+            background: linear-gradient(135deg, #5865f2, #eb459e);
+        }
+
+        .profile-header {
+            padding: 0 16px;
+            position: relative;
+        }
+
+        .avatar-container {
+            position: absolute;
+            top: -40px;
+            left: 16px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 6px solid var(--card-bg);
+            background-color: var(--bg-secondary);
+            object-fit: cover;
+        }
+
+        .status-badge {
+            width: 18px;
+            height: 18px;
+            background-color: var(--dnd-status);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            border: 3px solid var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .status-badge::after {
+            content: '';
+            width: 10px;
+            height: 3px;
+            background-color: var(--card-bg);
+            border-radius: 2px;
+        }
+
+        .profile-body {
+            padding: 50px 16px 16px 16px;
+        }
+
+        .display-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .username {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .section-box {
+            background-color: var(--bg-secondary);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 12px;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .server-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="banner"></div>
+            
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <img class="avatar" src="https://images-ext-1.discordapp.net/external/WFUHz67uiJODpzHJJThT60J9vxs8Y0u60fXOculW-Ec/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1453871368507494624/3008c542800705be71ce7ae9f6b79e61.png?format=webp&quality=lossless" alt="YippeeClippyCat Avatar">
+                    <div class="status-badge"></div>
+                </div>
+            </div>
+
+            <div class="profile-body">
+                <div class="display-name">YippeeClippyCat</div>
+                <div class="username">theclippyofficial</div>
+
+                <div class="section-box">
+                    <div class="section-title">Staff Team Section</div>
+                    <div class="server-grid">
+                        <!-- Tell me your servers and roles to add them -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
