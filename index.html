@@ -133,6 +133,69 @@
             gap: 8px;
             margin-top: 8px;
         }
+
+        .server-item {
+            background-color: var(--bg-primary);
+            padding: 10px 12px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .server-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .server-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #fff;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+
+        .server-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .server-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .staff-role {
+            font-size: 0.75rem;
+            color: var(--accent-blue);
+            font-weight: 500;
+        }
+
+        .join-btn {
+            background-color: var(--accent-blue);
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            flex-shrink: 0;
+        }
+
+        .join-btn:hover {
+            background-color: #4752c4;
+        }
     </style>
 </head>
 <body>
@@ -155,7 +218,51 @@
                 <div class="section-box">
                     <div class="section-title">Staff Team Section</div>
                     <div class="server-grid">
-                        <!-- Tell me your servers and roles to add them -->
+                        
+                        <div class="server-item">
+                            <div class="server-left">
+                                <div class="server-icon">CC</div>
+                                <div class="server-info">
+                                    <span class="server-name">Clippy's Community</span>
+                                    <span class="staff-role">Owner</span>
+                                </div>
+                            </div>
+                            <a href="https://discord.gg/VPCcaR57tH" target="_blank" class="join-btn">Join</a>
+                        </div>
+
+                        <div class="server-item">
+                            <div class="server-left">
+                                <div class="server-icon">YT</div>
+                                <div class="server-info">
+                                    <span class="server-name">[UNOFFICIAL] YouTube Community</span>
+                                    <span class="staff-role">Owner</span>
+                                </div>
+                            </div>
+                            <a href="https://discord.gg/UEe9svpX3q" target="_blank" class="join-btn">Join</a>
+                        </div>
+
+                        <div class="server-item">
+                            <div class="server-left">
+                                <div class="server-icon">COL</div>
+                                <div class="server-info">
+                                    <span class="server-name">Colombian Community</span>
+                                    <span class="staff-role">Admin</span>
+                                </div>
+                            </div>
+                            <a href="https://discord.gg/G8S2mwZ4RY" target="_blank" class="join-btn">Join</a>
+                        </div>
+
+                        <div class="server-item">
+                            <div class="server-left">
+                                <div class="server-icon">TFS</div>
+                                <div class="server-info">
+                                    <span class="server-name">The Filipino Server</span>
+                                    <span class="staff-role">Admin</span>
+                                </div>
+                            </div>
+                            <a href="https://discord.gg/aDteXS6yQv" target="_blank" class="join-btn">Join</a>
+                        </div>
+
                     </div>
                 </div>
 
